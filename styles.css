@@ -1,0 +1,181 @@
+body,
+html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+:root {
+    --mainRedColor: rgb(204, 40, 40);
+    --secondaryRedColor: rgb(112, 16, 16);
+    --whiteColor: rgb(242, 250, 239);
+    --mainPadding: 20px;
+    --mainMargin: 20px;
+}
+
+header {
+    background-color: var(--mainRedColor);
+    color: var(--whiteColor);
+    padding: var(--mainPadding);
+    font-size: 1.5rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+aside{
+    background-color: var(--mainRedColor);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 100vh;
+}
+
+aside nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+    padding: 0;
+}
+
+aside nav ul li a{
+    color: var(--whiteColor);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside nav ul li:hover{
+    background-color: var(--secondaryRedColor);
+}
+
+aside nav .userBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    padding: var(--mainPadding);
+    margin: var(--mainMargin);
+    color: var(--whiteColor);
+    background-color: var(--secondaryRedColor);
+    border-radius: 50%;
+}
+
+aside nav .userBox i{font-size: 2rem;}
+
+section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.paymentParentContainer form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 300px;
+    height: 400px;
+    padding: var(--mainPadding);
+    margin: var(--mainMargin);
+    border: 2px solid var(--mainRedColor);
+}
+
+.paymentParentContainer form input[type="submit"]{
+    background-color: var(--mainRedColor);
+    color: var(--whiteColor);
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.paymentParentContainer form input[type="submit"]:hover{
+    background-color: var(--secondaryRedColor);
+}
+
+.paymentParentContainer form input[type="number"],
+select{
+    padding: 10px;
+    border: 1px solid var(--mainRedColor);
+}
+
+.paymentParentContainer form input[type="number"]:hover,
+select:hover{
+    border: 2px solid var(--secondaryRedColor);
+}
+
+.paymentParentContainer form input[type="number"]:focus,
+select:focus{
+    border: 2px solid var(--mainRedColor);
+    outline: none;
+}
+
+.viewPayment table{
+    width: 800px;
+    border-collapse: collapse;
+    margin-top: var(--mainMargin);
+    margin-left: 200px;
+}
+
+.viewPayment table th,
+.viewPayment table td{
+    border: 1px solid var(--mainRedColor);
+    padding: 10px;
+}
+
+.viewPayment table th{
+    background-color: var(--mainRedColor);
+    color: var(--whiteColor);
+}
+
+.viewPayment tr:hover {
+    background-color: var(--secondaryRedColor);
+    color: var(--whiteColor);
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+#close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
