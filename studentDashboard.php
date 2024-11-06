@@ -93,7 +93,7 @@
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="SDscript.js"></script>
 </body>
 
 </html>
